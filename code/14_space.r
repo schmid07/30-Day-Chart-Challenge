@@ -62,5 +62,4 @@ gg_curry <- ggplot(df_curry, aes(x = locationX / 10, y = locationY / 10 - 41.5))
 
 gg_curry %>% drawNBAcourt(size = 1, col = "#006bb6", full = TRUE)
 
-ggsave("chart.png")
-
+ggsave(here::here("plots", "07", "curry.png"))
