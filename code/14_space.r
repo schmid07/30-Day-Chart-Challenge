@@ -7,7 +7,7 @@ library(ggtext)
 font_add_google(name = "Anton", family = "Anton")
 showtext_auto()
 
-# for some reason, entering vector of seasons wasn't working in teams_shot function 
+# for some reason, entering vector of seasons wasn't working in teams_shots function 
 # so created a function to loop through seasons 
 
 fun_season <- function(.x) {
@@ -33,10 +33,10 @@ gg_curry <- ggplot(df_curry, aes(x = locationX / 10, y = locationY / 10 - 41.5))
   theme_void(base_family = "Anton") + 
   labs(
     title = "Steph Curry Shot Chart",
-    caption = "Data Viz: Bill Schmid @schmid_07"
+    caption = "Data Viz: Bill Schmid @schmid_07 | Source: {nbastatR}"
   ) +
   theme(
-    plot.margin = margin(t = 15, r = 15, b = 15, l = 15),
+    plot.margin = margin(t= 15, r = 15, b= 15, l = 15),
     strip.background = element_blank(),
     strip.text = element_textbox(
       size = 20, 
@@ -54,7 +54,7 @@ gg_curry <- ggplot(df_curry, aes(x = locationX / 10, y = locationY / 10 - 41.5))
                               color = "#fdb927", 
                               size = 35,
                               margin = margin(t = 15, b = 15)),
-    plot.caption = element_text(hjust = .9,
+    plot.caption = element_text(hjust = .5,
                                 size = 8,
                                 margin = margin(t = 20),
                                 color = "#fdb927")
